@@ -1,0 +1,17 @@
+﻿@model App04_RazorView.Models.FileDetailInfo
+@{
+    ViewData["Title"] = "SIngleFileInfo";
+    int k = 100;
+}
+
+<h1 class="alert alert-info">SIngle File Info</h1>
+<br />
+<h3 class="alert alert-success">@Model.FileName</h3>
+<h3 class="alert alert-success">@Model.FileExtension</h3>
+<h3 class="alert alert-success">@Model.FileSize</h3>
+<h3 class="alert alert-success">@Model.FilePath</h3>
+<br />
+
+<h2 class="alert alert-success">Implicit Transition @k + 50 </h2>
+<h2 class="alert alert-success">Implicit Transition @k+50 </h2>
+<h2 class="alert alert-success">Explicit Transition @(k + 50 )</h2>

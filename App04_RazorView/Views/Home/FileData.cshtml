@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "FileData";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h2 class="alert alert-info">File Content</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        @*@ViewBag.con*@
+        @foreach (var item in ViewBag.line)
+        {
+            <p class="text-justify">@item</p>
+        }
+    </div>
+</div>
+
+

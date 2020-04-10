@@ -1,0 +1,35 @@
+﻿@model IEnumerable<App04_RazorView.Models.FileDetailInfo>
+@{
+    ViewData["Title"] = "ShowFileInfo";
+}
+
+<h2 class="alert alert-info">Show File Information</h2>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-responsive table-hover">
+            <thead>
+                <tr>
+                    <th>SL No.</th>
+                    <th>File Name</th>
+                    <th>Extension</th>
+                    <th>File Size</th>
+                    <th>Full Path</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.FileName</td>
+                        <td>@item.FileExtension</td>
+                        <td>@item.FileSize</td>
+                        <td>@item.FilePath</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

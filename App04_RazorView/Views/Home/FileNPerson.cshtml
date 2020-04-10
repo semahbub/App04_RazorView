@@ -1,0 +1,66 @@
+﻿@model App04_RazorView.ViewModels.PersonFile
+@{
+    ViewData["Title"] = "FileNPerson";
+}
+
+<h2 class="alert alert-info">Show File Information</h2>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-responsive table-hover">
+            <thead>
+                <tr>
+                    <th>SL No.</th>
+                    <th>File Name</th>
+                    <th>Extension</th>
+                    <th>File Size</th>
+                    <th>Full Path</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.FileList)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.FileName</td>
+                        <td>@item.FileExtension</td>
+                        <td>@item.FileSize</td>
+                        <td>@item.FilePath</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<br />
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-responsive table-hover">
+            <thead>
+                <tr>
+                    <th>SL No.</th>
+                    <th>Person Name</th>
+                    <th>Age</th>
+                    <th>Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.PersonList)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>@item.Age</td>
+                        <td>@item.Country</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
